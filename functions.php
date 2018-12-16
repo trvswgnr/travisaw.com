@@ -8,7 +8,10 @@ if( !is_admin() ) {
 
 	// add main stylesheet with dynamic versioning based on modified date
 	$css_version = filemtime(get_template_directory() . '/dist/style.css');
-	wp_enqueue_style('main', get_template_directory_uri() . '/dist/style.css?ver=' . $css_version, false, "$css_version", 'all');
+	wp_enqueue_style('main-style', get_template_directory_uri() . '/dist/style.css?ver=' . $css_version, false, "$css_version", 'all');
+
+	$js_version = filemtime(get_template_directory() . '/dist/main.js');
+	wp_enqueue_script('main-script', get_template_directory_uri() . '/dist/main.js?ver=' . $js_version, false, array() , $js_version, true);
 }
 
 // ACF - Add Options page-header
