@@ -16,10 +16,10 @@ $objective = get_field('objective');
 	</div>
 	<div class="bottomsec">
 		<div class="name">
-			<h1><?php echo $name; ?></h1>
+			<h1 id="name"><?php echo $name; ?></h1>
 		</div>
 		<div class="info">
-			<h2><?php echo $title; ?></h2>
+			<h2 id="title"><?php echo $title; ?></h2>
 		</div>
 		<hr/>
 		<?php if ($objective) : ?>
