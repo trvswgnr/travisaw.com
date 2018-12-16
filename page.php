@@ -6,8 +6,6 @@
   if ( have_posts() ) :
     while ( have_posts() ) :
 			?>
-			<h3><?php the_title(); ?></h3>
-			<hr>
 			<div class="rte">
 				<?php the_post();
 				the_content(); ?>
