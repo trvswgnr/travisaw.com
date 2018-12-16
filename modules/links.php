@@ -8,7 +8,7 @@ $links = get_field('links');
 	<?php foreach ($links as $field) : ?>
 		<div class="link-item">
 			<h4><i class="fa fa-lg fa-<?php echo strtolower($field['name']); ?>" aria-hidden="true"></i></h4>
-			<h5><a href="<?php echo $field['url']; ?>"><?php echo $field['url']; ?></a></h5>
+			<h5><a href="<?php echo $field['url']; ?>"><?php echo $field['name']; ?></a></h5>
 		</div>
 	<?php endforeach; ?>
 	</div>
