@@ -1,7 +1,13 @@
 import './scss/main.scss';
 
-function someFun() {
-	const x = 'hello';
-	return x;
-}
-document.getElementById('test').innerHTML = someFun();
+import fitty from "fitty";
+
+fitty('#name', {
+	minSize: 12,
+	maxSize: 40
+});
+
+fitty('#title', {
+	minSize: 12,
+	maxSize: 20
+});
