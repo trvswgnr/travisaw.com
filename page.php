@@ -7,9 +7,11 @@
     while ( have_posts() ) :
 			?>
 			<h3><?php the_title(); ?></h3>
-			<?php
-      the_post();
-      the_content();
+			<div class="rte">
+				<?php the_post();
+				the_content(); ?>
+			</div>
+	<?php
 		endwhile;
 	else :
 	endif;
