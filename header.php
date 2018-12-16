@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-
 	<title>
 	<?php
 	$seo_title = get_field('seo_title');
