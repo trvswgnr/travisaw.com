@@ -31,7 +31,7 @@ module.exports = {
 		new BrowserSyncPlugin({
         host: 'localhost',
         port: 3000,
-        proxy: 'http://localhost/dev-resume'
+        proxy: 'http://localhost/wp-test'
     })
 	]
 };
