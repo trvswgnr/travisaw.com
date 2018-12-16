@@ -9,7 +9,7 @@
 	if ($seo_title) {
 		echo $seo_title;
 	} else {
-		echo "Travis Wagner: " . get_the_title();
+		echo "Travis Wagner: " . the_title();
 	}
 	?>
 	</title>
