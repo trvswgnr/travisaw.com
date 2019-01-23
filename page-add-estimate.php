@@ -37,7 +37,7 @@ get_header();
 		'post_title'	=> true,
 		'post_content'	=> true,
 		'new_post'		=> array(
-			'post_type'		=> 'event',
+			'post_type'		=> 'estimate',
 			'post_status'	=> 'publish'
 		),
 		'submit_value'		=> 'Create a new event'
