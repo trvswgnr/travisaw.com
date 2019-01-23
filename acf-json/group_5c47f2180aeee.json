@@ -1,79 +1,30 @@
 {
     "key": "group_5c47f2180aeee",
-    "title": "Add Event",
+    "title": "Estimate Form",
     "fields": [
         {
-            "key": "field_5c47f220c374a",
-            "label": "Event Date",
-            "name": "event_date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y",
-            "return_format": "m\/d\/Y",
-            "first_day": 1
-        },
-        {
-            "key": "field_5c47fd77215c1",
-            "label": "Has Speakers",
-            "name": "event_has_speakers",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "true": "True",
-                "false": "False"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "false",
-            "layout": "vertical",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_5c47fdb7215c2",
-            "label": "Speakers",
-            "name": "event_speakers",
+            "key": "field_5c4817cf037e0",
+            "label": "Rooms",
+            "name": "rooms",
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5c47fd77215c1",
-                        "operator": "==",
-                        "value": "true"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5c47fe47215c5",
-            "min": 0,
+            "collapsed": "field_5c4817ea037e1",
+            "min": 1,
             "max": 0,
-            "layout": "table",
-            "button_label": "Add Speaker",
+            "layout": "row",
+            "button_label": "Add Room",
             "sub_fields": [
                 {
-                    "key": "field_5c47fe22215c3",
-                    "label": "First Name",
-                    "name": "first_name",
+                    "key": "field_5c4817ea037e1",
+                    "label": "Room Name",
+                    "name": "name",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -90,13 +41,45 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5c47fe40215c4",
-                    "label": "Last Name",
-                    "name": "last_name",
-                    "type": "text",
+                    "key": "field_5c48180c037e2",
+                    "label": "Painted Doors?",
+                    "name": "has_painted_doors",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "true": "True",
+                        "false": "False"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "false",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5c481864037e3",
+                    "label": "Door Size (in feet)",
+                    "name": "door_size",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c48180c037e2",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -106,13 +89,15 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "min": "",
+                    "max": "",
+                    "step": ""
                 },
                 {
-                    "key": "field_5c47fe47215c5",
-                    "label": "Email",
-                    "name": "email",
-                    "type": "text",
+                    "key": "field_5c4818c6037e4",
+                    "label": "Another Condition?",
+                    "name": "another_condition",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -121,13 +106,66 @@
                         "class": "",
                         "id": ""
                     },
+                    "choices": {
+                        "yes": "Yes",
+                        "maybe": "Maybe",
+                        "idk": "Not Sure",
+                        "no": "No"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "no",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5c4818f1037e5",
+                    "label": "Do Something Else",
+                    "name": "do_something_else",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c4818c6037e4",
+                                "operator": "!=",
+                                "value": "no"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
-                    "placeholder": "",
+                    "placeholder": "Placeholder",
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5c4819e44e9df",
+            "label": "Something Else",
+            "name": "est_something_else",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -149,5 +187,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1548222145
+    "modified": 1548229394
 }

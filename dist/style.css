@@ -440,6 +440,15 @@ p {
   width: 50%;
   margin-bottom: 1em; }
 
+input[type="submit"] {
+  border: none;
+  background: #3b99fc;
+  color: white;
+  height: 56px;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 0 2em; }
+
 /**
 	* Rich Text Editor (RTE) Styles
 	*/
