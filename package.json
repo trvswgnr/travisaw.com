@@ -1,6 +1,6 @@
 {
 	"name": "dev-resume",
-	"version": "1.0.0",
+	"version": "1.2.0",
 	"description": "My dynamic personal résumé/CV, written in PHP. Pulls skills and experience data from SQL database.",
 	"main": "index.js",
 	"scripts": {
