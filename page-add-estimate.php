@@ -29,7 +29,7 @@ get_header();
 	}
 </style>
 <div id="content" class="container content s-add-event">
-	<h1>Create New Event</h1>
+	<h1>Create New Estimate</h1>
 	<?php
 
 	acf_form(array(

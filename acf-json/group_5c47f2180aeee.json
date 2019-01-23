@@ -173,7 +173,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "event"
+                "value": "estimate"
             }
         ]
     ],
@@ -187,5 +187,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1548229394
+    "modified": 1548229999
 }
