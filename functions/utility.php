@@ -8,11 +8,11 @@ function module($part1, $part2 = '') {
 
   if ($part2 != '') { $hyphen = '-'; }
 
-  return locate_template('template-parts/' . $part1 . $hyphen . $part2 . '.php');
+  return locate_template('modules/' . $part1 . $hyphen . $part2 . '.php');
 }
 
 // function to include function partials
 function include_function($filename) {
-  return require_once( dirname( __FILE__ ) . '/functions/' . $filename . '.php' );
+  return require_once( dirname( __FILE__ ) . '/' . $filename . '.php' );
 }
 ?>
